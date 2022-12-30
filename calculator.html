@@ -8,7 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
         body {
-            background: #dde1e7;
+            background: #020912;
             font-family: 'Montserrat', sans-serif;
         }
         
@@ -17,7 +17,7 @@
             width: 320px;
             height: 550px;
             border-radius: .5em;
-            box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+            box-shadow: -3px -3px 7px #cb272773, 2px 2px 5px rgba(13, 73, 176, 0.288);
             margin: 0 auto;
             padding: 32px 16px;
             display: flex;
@@ -83,7 +83,7 @@
 </head>
 
 <body>
-    <!-- partial:index.partial.html -->
+
     <div class="container">
         <div class="result">
             <p id="result-box">0</p>
@@ -113,7 +113,7 @@
         </div>
 
     </div>
-    <!-- partial -->
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js'></script>
     <script src="./script.js"></script>
     <script>
@@ -127,10 +127,9 @@
         let btnSpread = [...btns];
         let allBtnSpread = [...allBtns];
 
-        // For Number Inputs
         btnSpread.forEach((button, i) => {
             button.addEventListener("click", () => {
-                // Inner Values for calculator
+
 
                 if (resultBox.innerHTML == "0") {
                     resultBox.innerHTML = "";
@@ -142,12 +141,9 @@
         });
 
 
-        // Function to evalute Strings
         function evaluate(fn) {
             return new Function('return ' + fn)();
         }
-
-        // To calculate All Input
         total.addEventListener('click', () => {
             let allInputs = resultBox.innerHTML;
 
@@ -156,7 +152,7 @@
             console.log(evaluate(allInputs));
         })
 
-        // Clear all Inputs
+
         clearBtn.addEventListener('click', () => {
             resultBox.innerHTML = "0";
         })
